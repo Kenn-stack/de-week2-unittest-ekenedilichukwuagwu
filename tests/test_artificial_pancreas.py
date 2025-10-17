@@ -38,6 +38,11 @@ def test_maintain(artificial_pancreas: ArtificialPancreasSystem):
     result = artificial_pancreas.predict_action()
     assert result == ('maintain', 105.0)
     
+def test_total_insulin_tracking(artificial_pancreas: ArtificialPancreasSystem):
+    artificial_pancreas.meal(100.0)
+    artificial_pancreas.predict_action()
+    assert artificial_pancreas.total_insulin_delivered == 50.0
+    
     
 def test_sequential_events(artificial_pancreas: ArtificialPancreasSystem):
     artificial_pancreas.meal(30.0) #increases glucose_level to 115
