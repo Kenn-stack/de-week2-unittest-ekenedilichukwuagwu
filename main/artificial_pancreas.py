@@ -59,7 +59,7 @@ class ArtificialPancreasSystem:
     def deliver_insulin(self) -> tuple[str, float]:
         dose = self.glucose_level - self.target_glucose
         self.glucose_level -= dose
-        self.total_insulin_delivered = dose
+        self.total_insulin_delivered += dose
         return ('deliver_insulin', self.glucose_level)
         
         
