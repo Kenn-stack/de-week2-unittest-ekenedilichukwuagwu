@@ -14,9 +14,7 @@ A **simplified data-driven model** for glucose regulation — simulating how an 
   * Maintain current state
 * Validates inputs with clear **type** and **value checks**.
 * Tracks **total insulin delivered** across sessions.
-* Built for **expandability** (e.g., adding machine learning or sensor integration later).
 
----
 ---
 
 ## ⚙️ Setup & Usage
